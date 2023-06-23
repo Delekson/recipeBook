@@ -1,16 +1,16 @@
 # Git
 .git
 .gitignore
-README.md
+.github
 
 # Docker
 .docker
 
 # Python
-app/__pycache__/
-app/*/__pycache__/
-app/*/*/__pycache__/
-app/*/*/*/__pycache__/
+**/*.pyc
 .env/
 .venv/
 venv/
+
+# VSCode
+.vscode

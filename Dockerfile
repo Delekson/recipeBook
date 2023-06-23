@@ -12,11 +12,15 @@ EXPOSE 8000
 ARG DEV=false
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
+    apk add --update --no-cache --virtual build-deps \
+        gcc python3-dev musl-dev mariadb-dev && \
     /py/bin/pip install -r /tmp/requirements.txt && \
     if [ $DEV = "true" ]; \
         then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
+    apk del build-deps && \
+    apk add mariadb-connector-c && \
     adduser \
         --disabled-password \
         --no-create-home \
