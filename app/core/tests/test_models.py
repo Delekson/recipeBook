@@ -60,7 +60,7 @@ class ModelTests(TestCase):
         """
         Check if we can create a superuser successfully
         """
-        email = 'test@example.com'
+        email = 'admin@example.com'
         password = 'testpass123'
         user = get_user_model().objects.create_superuser(
             email=email,
