@@ -1,4 +1,5 @@
 Django>=3.2.19,<3.3
 djangorestframework>=3.12.4,<3.13
 mysqlclient>=2.2.0,<2.3
+drf-spectacular>=0.15.1,<0.16
 email-validator>=2.0.0,<2.1
